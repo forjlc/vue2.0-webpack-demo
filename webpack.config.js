@@ -52,7 +52,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './index.html'),
       filename: 'index.html',
-      title: '手搭 Vue 开发环境'
+      title: '手动搭建的vue开发环境'
     }),
     // 添加 VueLoaderPlugin 插件
     new VueLoaderPlugin(),
