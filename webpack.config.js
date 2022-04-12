@@ -13,15 +13,13 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js', // 用 webpack 1 时需用 'vue/dist/vue.common.js'
+      'vue$': 'vue/dist/vue.esm.js',
       '@': './'
     },
     extensions: ['.js', '.json', '.vue'],
   },
   devServer: {
-    static: path.join(__dirname, 'dist/'),
     port: 3000,
-    allowedHosts: 'http://localhost:3000/dist/',
     hot: 'only'
   },
   module: {
@@ -54,7 +52,6 @@ module.exports = {
       filename: 'index.html',
       title: '手动搭建的vue开发环境'
     }),
-    // 添加 VueLoaderPlugin 插件
     new VueLoaderPlugin(),
     new CleanWebpackPlugin()
   ]
